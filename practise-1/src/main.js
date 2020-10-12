@@ -1,3 +1,2 @@
-const greeter = require('./greeter.js')
-console.log('111111' + greeter)
-document.getElementById("root").appendChild(greeter())
+const hello = require('./hello.js')
+document.getElementById("root").appendChild(hello())
