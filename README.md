@@ -2,7 +2,7 @@
 react electron practise
 
 #### practise 1
- [practise-1 webpack 练习](/practise-1)
+ [practise-1](/practise-1)   webpack 实践一
 
 练习使用webpack 进行多js文件打包（生成bundle.js）
 
