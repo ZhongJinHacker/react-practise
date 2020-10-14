@@ -32,3 +32,10 @@ __dirname 对应的是脚本文件的所在目录的位置
 | cheap-module-eval-source-map | 不会产生单独的map文件，（与eval-source-map类似）但开发者工具就只能看到行，但无法对应到具体的列（符号），对调试不便 |
 
 ---
+#### practise 3
+TODO: 实践webpack-dev-server
+
+---
+### practise 4
+TODO: 实践使用express 来替代webpack-dev-server 
+      比较二者优劣性
