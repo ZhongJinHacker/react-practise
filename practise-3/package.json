@@ -1,0 +1,18 @@
+{
+  "name": "practise-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node_modules/.bin/webpack --config ./config/webpack.config.js",
+    "start-server": "node_modules/.bin/webpack-dev-server --config ./config/webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
