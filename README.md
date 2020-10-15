@@ -33,7 +33,22 @@ __dirname 对应的是脚本文件的所在目录的位置
 
 ---
 #### practise 3
-TODO: 实践webpack-dev-server
+[practise-3](/practise-3)  实践webpack-dev-server
+webpack.config.js 增加配置
+```js
+    devServer: {
+        contentBase: './dist', //这里是执行命令的相对路径
+        port: 8080, //监听端口
+        open: true  //是否自动打开浏览器
+    }
+```
+
+package.json 新增执行脚本
+```json
+"start-server": "node_modules/.bin/webpack-dev-server --config ./config/webpack.config.js"
+```
+webpack-dev-server 会去执行webpack打包命令，并将结果保存在内存文件系统中，
+供浏览器读取
 
 ---
 ### practise 4
