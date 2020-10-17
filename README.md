@@ -52,5 +52,12 @@ webpack-dev-server 会去执行webpack打包命令，并将结果保存在内存
 
 ---
 ### practise 4
-TODO: 实践使用express 来替代webpack-dev-server 
-      比较二者优劣性
+
+dev.js 由node启动的express服务器，通过指定静态文件index.html实现开发代理，
+但还是需要点击浏览器刷新按钮才能看到修改的内容
+---
+### practise 5
+TODO: 实践使用express + webpack-dev-middleware + webpack-hot-middleware
+实现实时刷新
+      
+
