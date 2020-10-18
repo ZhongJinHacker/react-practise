@@ -57,7 +57,23 @@ dev.js 由node启动的express服务器，通过指定静态文件index.html实�
 但还是需要点击浏览器刷新按钮才能看到修改的内容
 ---
 ### practise 5
-TODO: 实践使用express + webpack-dev-middleware + webpack-hot-middleware
-实现实时刷新
+由于dev.js 使用的es6 的语法，所以必须配置babelrc 且在webpack.config.js中
+配置babel-loader，让其可以去转换es6的语法
+同时需要在 webpack.config.js中加一些配置
+```js
+module.exports = {
+    entry: [
+       + 'webpack-hot-middleware/client?noInfo=true&reload=true',
+        SRC_PATH + '/main.js'
+    ],
+
+...
+
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin()
+    ]
+```
+这样就可以实现热更新了
       
 
