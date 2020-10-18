@@ -53,10 +53,12 @@ webpack-dev-server 会去执行webpack打包命令，并将结果保存在内存
 ---
 ### practise 4
 
+[practise-4](/practise-4)  
 dev.js 由node启动的express服务器，通过指定静态文件index.html实现开发代理，
 但还是需要点击浏览器刷新按钮才能看到修改的内容
 ---
 ### practise 5
+[practise-5](/practise-5) 
 由于dev.js 使用的es6 的语法，所以必须配置babelrc 且在webpack.config.js中
 配置babel-loader，让其可以去转换es6的语法
 同时需要在 webpack.config.js中加一些配置
@@ -75,5 +77,12 @@ module.exports = {
     ]
 ```
 这样就可以实现热更新了
+---
+### practise 6
+[practise-5](/practise-5) 
+
+#### 实践 express + 中间件（webpack-dev-middleware + webpack-hot-middleware）
+#### 相较于practise-5 去掉了对es6的支持，后期再来实践babel时再加入，便于理解
+
       
 
