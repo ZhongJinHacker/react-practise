@@ -83,6 +83,20 @@ module.exports = {
 
 #### 实践 express + 中间件（webpack-dev-middleware + webpack-hot-middleware）
 #### 相较于practise-5 去掉了对es6的支持，后期再来实践babel时再加入，便于理解
+---
+### practise 7
+TODO: babel 实践es6 转 es5
+
+### practise 8
+TODO: babel 实践react 转 es5
+
+### practise 9
+TODO: 实践 css loader
+
+### practise 10
+TODO: 实践 scss loader
+
+
 
       
 
