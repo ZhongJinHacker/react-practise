@@ -79,7 +79,7 @@ module.exports = {
 这样就可以实现热更新了
 ---
 ### practise 6
-[practise-5](/practise-5) 
+[practise-6](/practise-6) 
 
 #### 实践 express + 中间件（webpack-dev-middleware + webpack-hot-middleware）
 #### 相较于practise-5 去掉了对es6的支持，后期再来实践babel时再加入，便于理解
