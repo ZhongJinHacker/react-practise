@@ -85,7 +85,35 @@ module.exports = {
 #### 相较于practise-5 去掉了对es6的支持，后期再来实践babel时再加入，便于理解
 ---
 ### practise 7
-TODO: babel 实践es6 转 es5
+#### [practise-7](/practise-7) 
+babel 实践es6 转 es5
+webpack.config 配置修改
+```js
+module.exports = {
+...
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                loader: ['babel-loader'],
+                exclude: /node_modules/,
+            }
+        ]
+    }
+
+}
+```
+这样babel-loader 就会去转化我们的js代码
+
+2. 配置babel-loader的转化规则 卸载.babelrc文件中(空的话默认是不处理)
+```json
+{
+  "presets": ["es2015"],
+  "plugins": []
+}
+```
+这样就可以写es6的代码了
+
 
 ### practise 8
 TODO: babel 实践react 转 es5
