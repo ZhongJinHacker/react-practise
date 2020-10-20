@@ -114,14 +114,16 @@ module.exports = {
 ```
 这样就可以写es6的代码了
 
-
-### practise 8
-TODO: babel 实践react 转 es5
+# practise 8
+TODO: HtmlWebpackPlugin 实践
 
 ### practise 9
-TODO: 实践 css loader
+TODO: babel 实践react 转 es5
 
 ### practise 10
+TODO: 实践 css loader
+
+### practise 11
 TODO: 实践 scss loader
 
 
