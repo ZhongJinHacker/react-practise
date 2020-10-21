@@ -115,7 +115,38 @@ module.exports = {
 这样就可以写es6的代码了
 
 # practise 8
-TODO: HtmlWebpackPlugin 实践
+HtmlWebpackPlugin 实践
+#### [practise-8](/practise-8)
+
+webpack.config.js  添加
+```js
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+...
+    plugins: [
+        new HtmlWebpackPlugin({
+            // 注入模版的标题
+            title: 'HtmlWebpackPlugin demo',
+            // 使用的模板
+            template: 'index.template.html',
+            // 生成的文件的名称
+            filename: 'index.html'
+        })
+    ]
+```
+主工程目录添加一个index.template.html文件
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div id='root'></div>
+</body>
+</html>
+```
+ok
 
 ### practise 9
 TODO: babel 实践react 转 es5
