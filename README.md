@@ -149,7 +149,53 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 ok
 
 ### practise 9
-TODO: babel 实践react 转 es5
+babel 实践react 转 es5
+[practise-9](/practise-9)
+
+1. 修改.babelrc，增加 react和 stage-0 解析器
+```json
+{
+  "presets": ["es2015", "react", "stage-0"],
+  "plugins": [
+    "babel-polyfill",
+    "transform-decorators-legacy"
+  ]
+}
+```
+2. 在package.json中安装插件
+```json
+  "dependencies": {
+  +  "@babel/runtime": "^7.12.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+  +  "babel-preset-react": "^6.24.1",
+  +  "babel-preset-stage-0": "^6.24.1",
+  +  "babel-plugin-transform-decorators-legacy": "^1.3.4",
+  +  "babel-polyfill": "^6.23.0",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+```
+3. 修改 webpack.config.js
+```js
+    module: {
+        rules: [
+            {
+        +        test: /\.jsx?$/,
+                loader: ['babel-loader'],
+                exclude: /node_modules/,
+            }
+        ]
+    },
+```
+编译执行，运行ok
 
 ### practise 10
 TODO: 实践 css loader
