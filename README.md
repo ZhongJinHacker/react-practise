@@ -201,6 +201,27 @@ babel 实践react 转 es5
 TODO: 实践 css loader
 不加css loader，默认支持内联style
 
+要支持引入外部css文件需要
+1 安装外部依赖
+```json
+"devDependencies": {
+...
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.21.0"
+}
+```
+2 修改 webpack.config.js
+```js
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
+```
+ok
+
 ### practise 11
 TODO: 实践 scss loader
 
