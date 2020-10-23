@@ -199,6 +199,7 @@ babel 实践react 转 es5
 
 ### practise 10
 TODO: 实践 css loader
+不加css loader，默认支持内联style
 
 ### practise 11
 TODO: 实践 scss loader
