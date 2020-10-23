@@ -1,4 +1,5 @@
 import React from 'react'
+import './app.css'
 
 class App extends React.Component {
     constructor() {
@@ -9,6 +10,7 @@ class App extends React.Component {
             <div>
                 <div style={style.helloWorld} >Hello World!!!!!</div>
                 <div style={{background: 'green',}}>hello hello</div>
+                <div className='chinese'>一二三四五</div>
             </div>
             )
     }
