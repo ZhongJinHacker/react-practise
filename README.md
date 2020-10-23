@@ -198,7 +198,10 @@ babel 实践react 转 es5
 编译执行，运行ok
 
 ### practise 10
-TODO: 实践 css loader
+#### 实践 css loader
+
+[practise-10](/practise-10)
+
 不加css loader，默认支持内联style
 
 要支持引入外部css文件需要
