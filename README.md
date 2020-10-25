@@ -200,7 +200,7 @@ babel 实践react 转 es5
 ### practise 10
 #### 实践 css loader
 
-[practise-010](/practise-011)
+[practise-010](/practise-010)
 
 不加css loader，默认支持内联style
 
@@ -226,7 +226,37 @@ babel 实践react 转 es5
 ok
 
 ### practise 11
-TODO: 实践 scss loader
+[practise-011](/practise-011)
+实践 scss loader
+
+修改package.json
+```js
+  "devDependencies": {
+    ...
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^0.21.0",
+}
+```
+
+修改webpack.config.js
+```js
+    module: {
+        rules: [
+           ... 
+            {
+                test: /\.scss/,
+                use: [{
+                    loader: "style-loader" // 将 JS 字符串生成为 style 节点
+                }, {
+                    loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
+                }, {
+                    loader: "sass-loader" // 将 Sass/Scss 编译成 CSS
+                }]
+            }
+        ]
+    },
+```
 
 ### practise 12
 TODO: webpack 分环境打包
