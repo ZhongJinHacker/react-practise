@@ -255,12 +255,33 @@ ok
                 }]
             }
         ]
-    },
+    }
 ```
 
 ### practise 12
+TODO: postcss-loader 实践
+
+### practise 13
+TODO: eslint 实践
+
+### practise 14
+TODO: stylelint 实践
+
+### practise 13
 TODO: webpack 分环境打包
 
+
+### practise 14
+TODO: react 生命周期实践
+
+### practise 15
+TODO: react router 实践
+
+### practise 16
+TODO: Mbox 实践
+
+### practise 17
+TODO: axios 实践
 
 
       
