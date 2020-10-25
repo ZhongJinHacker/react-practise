@@ -200,7 +200,7 @@ babel 实践react 转 es5
 ### practise 10
 #### 实践 css loader
 
-[practise-010](/practise-010)
+[practise-010](/practise-011)
 
 不加css loader，默认支持内联style
 
