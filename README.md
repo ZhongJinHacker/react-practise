@@ -2,7 +2,7 @@
 react electron practise
 
 #### practise 1
- [practise-1](/practise-1)   webpack 实践一
+ [practise-001](/practise-001)   webpack 实践一
 
 练习使用webpack 进行多js文件打包（生成bundle.js）
 
@@ -20,7 +20,7 @@ __dirname 对应的是脚本文件的所在目录的位置
 比如： webpack.config.js 内使用__dirname,__dirname = 'react-practise/practise-1/config'
 ---
 #### practise 2
- [practise-2](/practise-2)   devtool 实践
+ [practise-002](/practise-002)   devtool 实践
 
 练习使用webpack devtool 的使用
 
@@ -33,7 +33,7 @@ __dirname 对应的是脚本文件的所在目录的位置
 
 ---
 #### practise 3
-[practise-3](/practise-3)  实践webpack-dev-server
+[practise-003](/practise-003)  实践webpack-dev-server
 webpack.config.js 增加配置
 ```js
     devServer: {
@@ -53,12 +53,12 @@ webpack-dev-server 会去执行webpack打包命令，并将结果保存在内存
 ---
 ### practise 4
 
-[practise-4](/practise-4)  
+[practise-004](/practise-004)  
 dev.js 由node启动的express服务器，通过指定静态文件index.html实现开发代理，
 但还是需要点击浏览器刷新按钮才能看到修改的内容
 ---
 ### practise 5
-[practise-5](/practise-5) 
+[practise-005](/practise-005) 
 由于dev.js 使用的es6 的语法，所以必须配置babelrc 且在webpack.config.js中
 配置babel-loader，让其可以去转换es6的语法
 同时需要在 webpack.config.js中加一些配置
@@ -79,13 +79,13 @@ module.exports = {
 这样就可以实现热更新了
 ---
 ### practise 6
-[practise-6](/practise-6) 
+[practise-006](/practise-006) 
 
 #### 实践 express + 中间件（webpack-dev-middleware + webpack-hot-middleware）
 #### 相较于practise-5 去掉了对es6的支持，后期再来实践babel时再加入，便于理解
 ---
 ### practise 7
-#### [practise-7](/practise-7) 
+#### [practise-007](/practise-007) 
 babel 实践es6 转 es5
 webpack.config 配置修改
 ```js
@@ -116,7 +116,7 @@ module.exports = {
 
 # practise 8
 HtmlWebpackPlugin 实践
-#### [practise-8](/practise-8)
+#### [practise-008](/practise-008)
 
 webpack.config.js  添加
 ```js
@@ -150,7 +150,7 @@ ok
 
 ### practise 9
 babel 实践react 转 es5
-[practise-9](/practise-9)
+[practise-009](/practise-009)
 
 1. 修改.babelrc，增加 react和 stage-0 解析器
 ```json
@@ -200,7 +200,7 @@ babel 实践react 转 es5
 ### practise 10
 #### 实践 css loader
 
-[practise-10](/practise-10)
+[practise-010](/practise-010)
 
 不加css loader，默认支持内联style
 
