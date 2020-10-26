@@ -261,6 +261,10 @@ ok
 ### practise 12
 TODO: postcss-loader 实践
 
+bugfix:
+https://stackoverflow.com/questions/63944242/migrating-postcss-loader-from-3-0-0-to-4-0-2-results-in-error-object-object-i
+
+
 ### practise 13
 TODO: eslint 实践
 

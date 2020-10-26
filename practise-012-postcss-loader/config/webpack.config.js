@@ -44,6 +44,8 @@ module.exports = {
                     loader: "style-loader" // 将 JS 字符串生成为 style 节点
                 }, {
                     loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
+                },{
+                    loader: "postcss-loader",
                 }, {
                     loader: "sass-loader" // 将 Sass/Scss 编译成 CSS
                 }]
