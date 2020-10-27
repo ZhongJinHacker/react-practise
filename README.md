@@ -259,11 +259,97 @@ ok
 ```
 
 ### practise 12
-TODO: postcss-loader 实践
-
+postcss-loader 实践 css module 实践
+[practise-012-postcss-loader](/practise-012-postcss-loader)
+#### 1 配置postcss loader 及其插件 autoprefixer
+##### 修改package.json
+```json
+  "devDependencies": {
+    "autoprefixer": "^9.7.0",
+    "postcss-loader": "^4.0.4",
+  }
+```
+注意： autoprefixer 大于10 时会报错，参考如下
 bugfix:
 https://stackoverflow.com/questions/63944242/migrating-postcss-loader-from-3-0-0-to-4-0-2-results-in-error-object-object-i
 
+##### 修改webpack.config.js
+```js
+            {
+                test: /\.scss/,
+                use: [{
+                    loader: "style-loader" // 将 JS 字符串生成为 style 节点
+                }, {
+                    loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
+           +    },{
+           +        loader: "postcss-loader",
+           +    }, {
+                    loader: "sass-loader" // 将 Sass/Scss 编译成 CSS
+                }]
+            }
+```
+
+##### 主工程目录下添加 postcss.config.js
+```js
+module.exports = {
+    plugins: [
+        require('autoprefixer')({
+            "browsers": [
+                "defaults",
+                "not ie < 11",
+                "last 2 versions",
+                "> 1%",
+                "iOS 7",
+                "last 3 iOS versions"
+            ]
+        })
+    ]
+};
+
+```
+#### 2 配置css module 实现 css hash化，避免同名冲突
+##### 修改webpack.config.js
+```js
+            {
+                test: /\.scss/,
+                exclude: /node_modules/,
+                use: [{
+                    loader: "style-loader" // 将 JS 字符串生成为 style 节点
+                }, {
+                    loader: "css-loader", // 将 CSS 转化成 CommonJS 模块
+               +    options: {
+                        // 开启css modules
+               +        modules: true,
+               +        importLoaders: 1,
+                        // 自定义生成的类名
+               +        localIdentName: '[path][name]__[local]--[hash:base64:5]'
+               +    }
+                },{
+                    loader: "postcss-loader"
+                }, {
+                    loader: "sass-loader" // 将 Sass/Scss 编译成 CSS
+                }]
+            }
+```
+##### 修改js文件中对scss的使用方式
+```js
+import app2Styles from './app2.scss'
+
+class App extends React.Component {
+    constructor() {
+        super()
+    }
+    render() {
+        return (
+            <div>
+...
+                <div className={app2Styles.scssChinese}>五六七八</div>
+            </div>
+            )
+    }
+}
+```
+即修改为对象引用方式即可
 
 ### practise 13
 TODO: eslint 实践
