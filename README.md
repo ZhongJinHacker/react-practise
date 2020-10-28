@@ -352,7 +352,90 @@ class App extends React.Component {
 即修改为对象引用方式即可
 
 ### practise 13
-TODO: eslint 实践
+eslint 实践
+[practise-013-eslint](/practise-013-eslint)
+修改 webpack.config,js
+```js
+        rules: [
+            {
+                test: /\.jsx?$/,
+        +        loader: ['babel-loader', 'eslint-loader'],
+                exclude: /node_modules/,
+            },
+        ]
+```
+修改package.json
+```json
+    "babel-eslint": "^8.0.1",
+    "eslint": "^5.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-formatter-pretty": "^1.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1"
+```
+
+修改.eslintec.json
+```json
+{
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "parser": "babel-eslint",
+
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+
+    "plugins": [
+        "react"
+    ],
+
+    "rules": {
+        // 要求行尾使用分号
+        //"semi": [2, "always"],
+        // 要求构造函数首字母大写 0 - 不要求
+        "new-cap": [0],
+        // 4个空格缩进 switchcase 2个
+        "indent": [2, 4, { "SwitchCase": 1 }],
+        // 仅多行时运行末尾逗号
+        "comma-dangle": [2, "only-multiline"],
+        // 强制在 function的左括号之前不使用一致的空格
+        "space-before-function-paren": [2, "never"],
+        // 强制使用一致的换行符风格
+        "operator-linebreak": [2, "before"],
+        // 不强制禁止数字字面量中使用前导和末尾小数点
+        "no-floating-decimal": [0],
+        // jsx 缩进4个空格
+        "react/jsx-indent": [2, 4],
+        // 验证属性缩进
+        "react/jsx-indent-props": [2, 4],
+        // 强制布尔属性的记号
+        "react/jsx-boolean-value": [2, "always"],
+        // 属性类型校验，这里是不校验
+        "react/prop-types": [0],
+        // jsx 内部使用双引号
+        "jsx-quotes": [2, "prefer-double"]
+    }
+}
+
+```
+ok
+
+参考
+https://eslint.bootcss.com/docs/rules/
+https://github.com/yannickcr/eslint-plugin-react
 
 ### practise 14
 TODO: stylelint 实践
