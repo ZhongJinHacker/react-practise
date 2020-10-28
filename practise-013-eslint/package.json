@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node_modules/.bin/webpack --config ./config/webpack.config.js",
-    "start-server": "node_modules/.bin/webpack-dev-server --config ./config/webpack.config.js"
+    "start-server": "node_modules/.bin/webpack-dev-server --config ./config/webpack.config.js",
+    "js-lint": "node node_modules/.bin/eslint ./src",
+    "lint": "npm run js-lint"
   },
   "author": "",
   "license": "ISC",
@@ -32,6 +34,17 @@
     "style-loader": "^0.21.0",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "babel-eslint": "^8.0.1",
+    "eslint": "^5.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-formatter-pretty": "^1.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
