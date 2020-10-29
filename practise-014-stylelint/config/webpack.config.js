@@ -1,5 +1,6 @@
 var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 
 const ROOT_PATH = path.resolve(__dirname, '../')
@@ -67,6 +68,14 @@ module.exports = {
             title: 'React code demo',
             template: 'index.template.html',
             filename: 'index.html'
+        }),
+        new StyleLintPlugin({
+            context: "src",
+            configFile: path.resolve( './.stylelintrc'),
+            files: ['**/*.css', '**/*.scss'],
+            failOnError: false,
+            quiet: true,
+            syntax: 'scss'
         })
     ]
 }

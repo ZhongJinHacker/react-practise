@@ -9,12 +9,12 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <div style={style.helloWorld} >Hello World!!!!!</div>
-                <div style={{background: 'green',}}>hello hello hello</div>
-                <div className='chinese'>一二三四五</div>
+                <div style={style.helloWorld}>Hello World!!!!!</div>
+                <div style={{background: "green"}}>hello hello hello</div>
+                <div className="chinese">一二三四五</div>
                 <div className={app2Styles.scssChinese}>五六七八</div>
             </div>
-            )
+        )
     }
 }
 
