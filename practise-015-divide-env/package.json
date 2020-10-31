@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node_modules/.bin/webpack --config ./config/webpack.config.js",
-    "start-server": "node_modules/.bin/webpack-dev-server --config ./config/webpack.config.js",
+    "build": "node_modules/.bin/webpack --config ./config/webpack.config.dev.js",
+    "start-server": "node_modules/.bin/webpack-dev-server --config ./config/webpack.config.dev.js",
     "js-lint": "node node_modules/.bin/eslint ./src",
     "lint": "npm run js-lint"
   },

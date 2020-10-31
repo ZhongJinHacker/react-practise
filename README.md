@@ -13,11 +13,11 @@ react electron practise
 ```
 使用配置文件方式
 ```shell script
-node_modules/.bin/webpack --config ./config/webpack.config.js
+node_modules/.bin/webpack --config ./config/webpack.config.dev.js
 ```
 ##### 注意：
 __dirname 对应的是脚本文件的所在目录的位置
-比如： webpack.config.js 内使用__dirname,__dirname = 'react-practise/practise-1/config'
+比如： webpack.config.dev.js 内使用__dirname,__dirname = 'react-practise/practise-1/config'
 ---
 #### practise 2
  [practise-002](/practise-002)   devtool 实践
@@ -34,7 +34,7 @@ __dirname 对应的是脚本文件的所在目录的位置
 ---
 #### practise 3
 [practise-003](/practise-003)  实践webpack-dev-server
-webpack.config.js 增加配置
+webpack.config.dev.js 增加配置
 ```js
     devServer: {
         contentBase: './dist', //这里是执行命令的相对路径
@@ -45,7 +45,7 @@ webpack.config.js 增加配置
 
 package.json 新增执行脚本
 ```json
-"start-server": "node_modules/.bin/webpack-dev-server --config ./config/webpack.config.js"
+"start-server": "node_modules/.bin/webpack-dev-server --config ./config/webpack.config.dev.js"
 ```
 webpack-dev-server 会去执行webpack打包命令，并将结果保存在内存文件系统中，
 供浏览器读取
@@ -118,7 +118,7 @@ module.exports = {
 HtmlWebpackPlugin 实践
 #### [practise-008](/practise-008)
 
-webpack.config.js  添加
+webpack.config.dev.js  添加
 ```js
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 ...
@@ -183,7 +183,7 @@ babel 实践react 转 es5
     "webpack-dev-server": "^3.11.0"
   }
 ```
-3. 修改 webpack.config.js
+3. 修改 webpack.config.dev.js
 ```js
     module: {
         rules: [
@@ -213,7 +213,7 @@ babel 实践react 转 es5
     "style-loader": "^0.21.0"
 }
 ```
-2 修改 webpack.config.js
+2 修改 webpack.config.dev.js
 ```js
             {
                 test: /\.css$/,
